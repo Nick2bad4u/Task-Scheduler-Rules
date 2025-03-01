@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="GUI" XmlFormat="23">
+    <Notes/>
+    <Compare>
+        <Variant>TimeAndSize</Variant>
+        <Symlinks>Exclude</Symlinks>
+        <IgnoreTimeShift/>
+    </Compare>
+    <Synchronize>
+        <Changes>
+            <Left Create="right" Update="right" Delete="right"/>
+            <Right Create="right" Update="right" Delete="right"/>
+        </Changes>
+        <DeletionPolicy>Versioning</DeletionPolicy>
+        <VersioningFolder Threads="16" Style="Replace">C:\Users\Nick\Dropbox\Runescape\RuneLite-Settings-Old</VersioningFolder>
+    </Synchronize>
+    <Filter>
+        <Include>
+            <Item>*</Item>
+        </Include>
+        <Exclude>
+            <Item>\System Volume Information\</Item>
+            <Item>\$Recycle.Bin\</Item>
+            <Item>\RECYCLE?\</Item>
+            <Item>*\thumbs.db</Item>
+        </Exclude>
+        <SizeMin Unit="None">0</SizeMin>
+        <SizeMax Unit="None">0</SizeMax>
+        <TimeSpan Type="None">0</TimeSpan>
+    </Filter>
+    <FolderPairs>
+        <Pair>
+            <Left Threads="16">C:\Users\Nick\.runelite</Left>
+            <Right Threads="16">C:\Users\Nick\Dropbox\Runescape\RuneLite-Settings</Right>
+        </Pair>
+        <Pair>
+            <Left Threads="16">C:\Users\Nick\.runelite\worldheatmap</Left>
+            <Right Threads="16">C:\Users\Nick\Dropbox\Runescape\All Screenshots\WorldHeatmaps</Right>
+            <Synchronize>
+                <Changes>
+                    <Left Create="right" Update="right" Delete="none"/>
+                    <Right Create="none" Update="right" Delete="right"/>
+                </Changes>
+                <DeletionPolicy>Versioning</DeletionPolicy>
+                <VersioningFolder Threads="16" Style="TimeStamp-File">C:\Users\Nick\Dropbox\Runescape\RuneLite-Settings-Old</VersioningFolder>
+            </Synchronize>
+        </Pair>
+        <Pair>
+            <Left Threads="16">C:\Users\Nick\.runelite\screenshots\SubLife</Left>
+            <Right Threads="16">C:\Users\Nick\Dropbox\Runescape\All Screenshots</Right>
+            <Synchronize>
+                <Changes>
+                    <Left Create="right" Update="right" Delete="none"/>
+                    <Right Create="none" Update="right" Delete="right"/>
+                </Changes>
+                <DeletionPolicy>Versioning</DeletionPolicy>
+                <VersioningFolder Threads="16" Style="Replace">C:\Users\Nick\Dropbox\Runescape\RuneLite-Settings-Old</VersioningFolder>
+            </Synchronize>
+        </Pair>
+    </FolderPairs>
+    <Errors Ignore="true" Retry="2" Delay="1"/>
+    <PostSyncCommand Condition="Completion"/>
+    <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
+    <EmailNotification Condition="Always"/>
+    <GridViewType>Action</GridViewType>
+</FreeFileSync>

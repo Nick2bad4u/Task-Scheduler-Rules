@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="GUI" XmlFormat="23">
+    <Notes/>
+    <Compare>
+        <Variant>TimeAndSize</Variant>
+        <Symlinks>Exclude</Symlinks>
+        <IgnoreTimeShift/>
+    </Compare>
+    <Synchronize>
+        <Changes>
+            <Left Create="right" Update="right" Delete="none"/>
+            <Right Create="none" Update="none" Delete="none"/>
+        </Changes>
+        <DeletionPolicy>RecycleBin</DeletionPolicy>
+        <VersioningFolder Style="Replace"/>
+    </Synchronize>
+    <Filter>
+        <Include>
+            <Item>*</Item>
+        </Include>
+        <Exclude>
+            <Item>\System Volume Information\</Item>
+            <Item>\$Recycle.Bin\</Item>
+            <Item>\RECYCLE?\</Item>
+            <Item>*\thumbs.db</Item>
+        </Exclude>
+        <SizeMin Unit="None">0</SizeMin>
+        <SizeMax Unit="None">0</SizeMax>
+        <TimeSpan Type="None">0</TimeSpan>
+    </Filter>
+    <FolderPairs>
+        <Pair>
+            <Left Threads="10">C:\Users\Nick\Dropbox\PC (2)\Pictures\Zwift</Left>
+            <Right Threads="10">C:\Users\Nick\Dropbox\Cycling\ZwiftMedia\CleanVersions</Right>
+            <Filter>
+                <Include>
+                    <Item>*clean.jpg</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left Threads="10">C:\Users\Nick\Dropbox\PC (2)\Pictures\Zwift</Left>
+            <Right Threads="10">C:\Users\Nick\Dropbox\Cycling\ZwiftMedia\</Right>
+            <Filter>
+                <Include>
+                    <Item>*.jpg</Item>
+                </Include>
+                <Exclude>
+                    <Item>*clean.jpg</Item>
+                </Exclude>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left Threads="10">C:\Users\Nick\Dropbox\PC (2)\Videos\Zwift</Left>
+            <Right Threads="10">C:\Users\Nick\Dropbox\Cycling\ZwiftMedia\</Right>
+            <Filter>
+                <Include>
+                    <Item>*.mp4</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left Threads="10">C:\Users\Nick\Dropbox\PC (2)\Documents\Zwift</Left>
+            <Right Threads="10">C:\Users\Nick\Dropbox\Cycling\ZwiftDocs</Right>
+            <Synchronize>
+                <Changes>
+                    <Left Create="right" Update="right" Delete="none"/>
+                    <Right Create="none" Update="none" Delete="none"/>
+                </Changes>
+                <DeletionPolicy>Versioning</DeletionPolicy>
+                <VersioningFolder Threads="10" Style="TimeStamp-Folder">C:\Users\Nick\Dropbox\Cycling\ZwiftDocsOld</VersioningFolder>
+            </Synchronize>
+        </Pair>
+    </FolderPairs>
+    <Errors Ignore="true" Retry="1" Delay="1"/>
+    <PostSyncCommand Condition="Completion"/>
+    <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
+    <EmailNotification Condition="Always"/>
+    <GridViewType>Action</GridViewType>
+</FreeFileSync>

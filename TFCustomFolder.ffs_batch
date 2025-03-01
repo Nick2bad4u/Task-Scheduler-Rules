@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="BATCH" XmlFormat="23">
+    <Notes/>
+    <Compare>
+        <Variant>TimeAndSize</Variant>
+        <Symlinks>Exclude</Symlinks>
+        <IgnoreTimeShift/>
+    </Compare>
+    <Synchronize>
+        <Changes>
+            <Left Create="right" Update="right" Delete="right"/>
+            <Right Create="left" Update="left" Delete="left"/>
+        </Changes>
+        <DeletionPolicy>RecycleBin</DeletionPolicy>
+        <VersioningFolder Style="Replace"/>
+    </Synchronize>
+    <Filter>
+        <Include>
+            <Item>*</Item>
+        </Include>
+        <Exclude>
+            <Item>\System Volume Information\</Item>
+            <Item>\$Recycle.Bin\</Item>
+            <Item>\RECYCLE?\</Item>
+            <Item>*\thumbs.db</Item>
+            <Item>\tf2_mods</Item>
+        </Exclude>
+        <SizeMin Unit="None">0</SizeMin>
+        <SizeMax Unit="None">0</SizeMax>
+        <TimeSpan Type="None">0</TimeSpan>
+    </Filter>
+    <FolderPairs>
+        <Pair>
+            <Left>E:\SteamLibrary\steamapps\common\Team Fortress 2\tf\demos</Left>
+            <Right>C:\Users\Nick\Dropbox\Gaming\TeamFortress2\TF-Demos-Folder</Right>
+        </Pair>
+        <Pair>
+            <Left>E:\SteamLibrary\steamapps\common\Team Fortress 2\tf\materials\vgui\logos</Left>
+            <Right>C:\Users\Nick\Dropbox\Gaming\TeamFortress2\TF-Logos-Folder</Right>
+        </Pair>
+        <Pair>
+            <Left>E:\SteamLibrary\steamapps\common\Team Fortress 2\tf\materials\vgui\logos</Left>
+            <Right>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\tf2\logos</Right>
+        </Pair>
+        <Pair>
+            <Left>E:\SteamLibrary\steamapps\common\Team Fortress 2\tf\custom</Left>
+            <Right>C:\Users\Nick\Dropbox\Gaming\TeamFortress2\TF-Custom-Folder</Right>
+        </Pair>
+        <Pair>
+            <Left>E:\SteamLibrary\steamapps\common\Team Fortress 2\tf\custom</Left>
+            <Right>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\tf2\custom</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\tf2\cfg\</Left>
+            <Right>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\tf2\</Right>
+            <Filter>
+                <Include>
+                    <Item>autoexec.cfg</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+    </FolderPairs>
+    <Errors Ignore="true" Retry="0" Delay="5"/>
+    <PostSyncCommand Condition="Completion"/>
+    <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
+    <EmailNotification Condition="Always"/>
+    <GridViewType>Action</GridViewType>
+    <Batch>
+        <ProgressDialog Minimized="true" AutoClose="true"/>
+        <ErrorDialog>Show</ErrorDialog>
+        <PostSyncAction>None</PostSyncAction>
+    </Batch>
+</FreeFileSync>

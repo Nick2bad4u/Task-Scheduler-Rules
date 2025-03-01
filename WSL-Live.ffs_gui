@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="GUI" XmlFormat="23">
+    <Notes>Copies all live VHDs to RAID5 NAS.</Notes>
+    <Compare>
+        <Variant>TimeAndSize</Variant>
+        <Symlinks>Exclude</Symlinks>
+        <IgnoreTimeShift/>
+    </Compare>
+    <Synchronize>
+        <Changes>
+            <Left Create="right" Update="right" Delete="right"/>
+            <Right Create="right" Update="right" Delete="right"/>
+        </Changes>
+        <DeletionPolicy>Versioning</DeletionPolicy>
+        <VersioningFolder Style="TimeStamp-File">R:\WSL-Files-Old</VersioningFolder>
+    </Synchronize>
+    <Filter>
+        <Include>
+            <Item>*</Item>
+        </Include>
+        <Exclude>
+            <Item>\System Volume Information\</Item>
+            <Item>\$Recycle.Bin\</Item>
+            <Item>\RECYCLE?\</Item>
+            <Item>*\thumbs.db</Item>
+        </Exclude>
+        <SizeMin Unit="None">0</SizeMin>
+        <SizeMax Unit="None">0</SizeMax>
+        <TimeSpan Type="None">0</TimeSpan>
+    </Filter>
+    <FolderPairs>
+        <Pair>
+            <Left>\\wsl.localhost\Arch\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Arch</Right>
+        </Pair>
+        <Pair>
+            <Left>\\wsl.localhost\Debian\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Debian</Right>
+        </Pair>
+        <Pair>
+            <Left>\\wsl.localhost\Fedora\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Fedora</Right>
+        </Pair>
+        <Pair>
+            <Left>\\wsl.localhost\kali-linux\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Kali-Linux</Right>
+        </Pair>
+        <Pair>
+            <Left>\\wsl.localhost\Ubuntu\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Ubuntu</Right>
+        </Pair>
+    </FolderPairs>
+    <Errors Ignore="true" Retry="0" Delay="5"/>
+    <PostSyncCommand Condition="Completion"/>
+    <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
+    <EmailNotification Condition="Always"/>
+    <GridViewType>Action</GridViewType>
+</FreeFileSync>

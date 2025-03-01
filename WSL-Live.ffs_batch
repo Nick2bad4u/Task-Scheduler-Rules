@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FreeFileSync XmlType="BATCH" XmlFormat="23">
+    <Notes>Copies all live VHDs to RAID5 NAS.</Notes>
+    <Compare>
+        <Variant>TimeAndSize</Variant>
+        <Symlinks>Exclude</Symlinks>
+        <IgnoreTimeShift/>
+    </Compare>
+    <Synchronize>
+        <Changes>
+            <Left Create="right" Update="right" Delete="right"/>
+            <Right Create="right" Update="right" Delete="right"/>
+        </Changes>
+        <DeletionPolicy>Versioning</DeletionPolicy>
+        <VersioningFolder Style="TimeStamp-File">R:\WSL-Files-Old</VersioningFolder>
+    </Synchronize>
+    <Filter>
+        <Include>
+            <Item>*</Item>
+        </Include>
+        <Exclude>
+            <Item>\System Volume Information\</Item>
+            <Item>\$Recycle.Bin\</Item>
+            <Item>\RECYCLE?\</Item>
+            <Item>*\thumbs.db</Item>
+            <Item>\.cache\at-spi\bus_10.0</Item>
+            <Item>\.cache\at-spi\bus_11.0</Item>
+            <Item>\.cache\at-spi\bus_12.0</Item>
+            <Item>\.cache\at-spi\bus_13.0</Item>
+            <Item>\.cache\at-spi\bus_14.0</Item>
+            <Item>\.cache\keyring-831FT2\control</Item>
+            <Item>\.cache\keyring-VI4PW2\control</Item>
+            <Item>\.gnupg\S.gpg-agent</Item>
+            <Item>\.gnupg\S.gpg-agent.browser</Item>
+            <Item>\.gnupg\S.gpg-agent.extra</Item>
+            <Item>\.gnupg\S.gpg-agent.ssh</Item>
+        </Exclude>
+        <SizeMin Unit="None">0</SizeMin>
+        <SizeMax Unit="None">0</SizeMax>
+        <TimeSpan Type="None">0</TimeSpan>
+    </Filter>
+    <FolderPairs>
+        <Pair>
+            <Left Threads="15">\\wsl.localhost\Arch\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Arch</Right>
+        </Pair>
+        <Pair>
+            <Left Threads="15">\\wsl.localhost\Debian\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Debian</Right>
+        </Pair>
+        <Pair>
+            <Left Threads="15">\\wsl.localhost\Fedora\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Fedora</Right>
+        </Pair>
+        <Pair>
+            <Left Threads="15">\\wsl.localhost\kali-linux\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Kali-Linux</Right>
+        </Pair>
+        <Pair>
+            <Left Threads="15">\\wsl.localhost\Ubuntu\home\nick2bad4u</Left>
+            <Right>R:\WSL-Files\Ubuntu</Right>
+        </Pair>
+    </FolderPairs>
+    <Errors Ignore="true" Retry="1" Delay="0"/>
+    <PostSyncCommand Condition="Completion"/>
+    <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
+    <EmailNotification Condition="Always"/>
+    <GridViewType>Action</GridViewType>
+    <Batch>
+        <ProgressDialog Minimized="true" AutoClose="true"/>
+        <ErrorDialog>Show</ErrorDialog>
+        <PostSyncAction>None</PostSyncAction>
+    </Batch>
+</FreeFileSync>
