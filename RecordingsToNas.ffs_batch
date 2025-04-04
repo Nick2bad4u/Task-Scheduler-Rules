@@ -31,6 +31,10 @@
     </Filter>
     <FolderPairs>
         <Pair>
+            <Left>C:\Users\Nick\AppData\Roaming\obs-studio</Left>
+            <Right>C:\Users\Nick\Dropbox\Cycling\OBS-Backup</Right>
+        </Pair>
+        <Pair>
             <Left Threads="10">F:\Recordings</Left>
             <Right>R:\Recordings</Right>
         </Pair>

@@ -39,7 +39,27 @@
         </Pair>
         <Pair>
             <Left>C:\Users\Nick\Dropbox\PC (2)\Documents\PowerShell\</Left>
-            <Right>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\Userstyles\UserStyles</Right>
+            <Right>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\Userstyles</Right>
+            <Compare>
+                <Variant>Content</Variant>
+                <Symlinks>Exclude</Symlinks>
+                <IgnoreTimeShift/>
+            </Compare>
+            <Filter>
+                <Include>
+                    <Item>Microsoft.PowerShell_profile.ps1</Item>
+                    <Item>Microsoft.VSCode_profile.ps1</Item>
+                    <Item>Profile.ps1</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\Dropbox\PC (2)\Documents\PowerShell\</Left>
+            <Right>C:\Program Files\PowerShell\7</Right>
             <Compare>
                 <Variant>TimeAndSize</Variant>
                 <Symlinks>Exclude</Symlinks>
@@ -48,6 +68,8 @@
             <Filter>
                 <Include>
                     <Item>Microsoft.PowerShell_profile.ps1</Item>
+                    <Item>Microsoft.VSCode_profile.ps1</Item>
+                    <Item>Profile.ps1</Item>
                 </Include>
                 <Exclude/>
                 <SizeMin Unit="None">0</SizeMin>
