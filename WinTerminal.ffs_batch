@@ -23,6 +23,8 @@
             <Item>\$Recycle.Bin\</Item>
             <Item>\RECYCLE?\</Item>
             <Item>*\thumbs.db</Item>
+            <Item>\INetCache\</Item>
+            <Item>\AC\INetCache\</Item>
         </Exclude>
         <SizeMin Unit="None">0</SizeMin>
         <SizeMax Unit="None">0</SizeMax>
@@ -58,10 +60,10 @@
             </Filter>
         </Pair>
         <Pair>
-            <Left>C:\Users\Nick\Dropbox\PC (2)\Documents\PowerShell\</Left>
-            <Right>C:\Program Files\PowerShell\7</Right>
+            <Left>C:\Program Files\PowerShell\7</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsPowershell7ProfileSettings</Right>
             <Compare>
-                <Variant>TimeAndSize</Variant>
+                <Variant>Content</Variant>
                 <Symlinks>Exclude</Symlinks>
                 <IgnoreTimeShift/>
             </Compare>
