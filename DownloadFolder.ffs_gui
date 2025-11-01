@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FreeFileSync XmlType="BATCH" XmlFormat="23">
+<FreeFileSync XmlType="GUI" XmlFormat="23">
     <Notes/>
     <Compare>
         <Variant>TimeAndSize</Variant>
@@ -11,8 +11,8 @@
             <Left Create="right" Update="right" Delete="none"/>
             <Right Create="none" Update="right" Delete="right"/>
         </Changes>
-        <DeletionPolicy>Versioning</DeletionPolicy>
-        <VersioningFolder Threads="60" Style="TimeStamp-Folder">C:\Users\Nick\Dropbox\Random Save\VSCodeUserDataBackup-Versioning</VersioningFolder>
+        <DeletionPolicy>RecycleBin</DeletionPolicy>
+        <VersioningFolder Style="Replace"/>
     </Synchronize>
     <Filter>
         <Include>
@@ -23,8 +23,7 @@
             <Item>\$Recycle.Bin\</Item>
             <Item>\RECYCLE?\</Item>
             <Item>*\thumbs.db</Item>
-            <Item>*\globalStorage\</Item>
-            <Item>*\workspaceStorage\</Item>
+            <Item>*.ffs_tmp</Item>
         </Exclude>
         <SizeMin Unit="None">0</SizeMin>
         <SizeMax Unit="None">0</SizeMax>
@@ -32,22 +31,17 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left Threads="60">C:\Users\Nick\AppData\Roaming\Code\User</Left>
-            <Right Threads="60">C:\Users\Nick\Dropbox\Random Save\VSCodeUserDataBackup</Right>
+            <Left>C:\Users\Nick\AppData\Roaming\obs-studio</Left>
+            <Right>C:\Users\Nick\Dropbox\Cycling\OBS-Backup</Right>
         </Pair>
         <Pair>
-            <Left Threads="60">C:\Users\Nick\AppData\Roaming\Code - Insiders\User</Left>
-            <Right Threads="60">C:\Users\Nick\Dropbox\Random Save\VSCodeInsidersUserDataBackup</Right>
+            <Left Threads="10">F:\Recordings</Left>
+            <Right>R:\Recordings</Right>
         </Pair>
     </FolderPairs>
-    <Errors Ignore="true" Retry="0" Delay="5"/>
+    <Errors Ignore="true" Retry="3" Delay="1"/>
     <PostSyncCommand Condition="Completion"/>
     <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
     <EmailNotification Condition="Always"/>
     <GridViewType>Action</GridViewType>
-    <Batch>
-        <ProgressDialog Minimized="true" AutoClose="true"/>
-        <ErrorDialog>Show</ErrorDialog>
-        <PostSyncAction>None</PostSyncAction>
-    </Batch>
 </FreeFileSync>

@@ -88,6 +88,10 @@
             <Right Threads="10">C:\Users\Nick\Dropbox\Cycling\Sauce4Zwift-Copy\documents-saucemods\SauceMods</Right>
         </Pair>
         <Pair>
+            <Left Threads="10">C:\Users\Nick\Dropbox\PC (2)\Documents\SauceMods</Left>
+            <Right Threads="10">C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\Sauce4ZwiftModsRepo</Right>
+        </Pair>
+        <Pair>
             <Left Threads="10">C:\Users\Nick\AppData\Roaming\Sauce for Zwift™</Left>
             <Right Threads="10">C:\Users\Nick\Dropbox\Cycling\Sauce4Zwift-Copy\appdata-roaming\Sauce for Zwift™</Right>
         </Pair>

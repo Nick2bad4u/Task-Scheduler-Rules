@@ -7,7 +7,10 @@
         <IgnoreTimeShift/>
     </Compare>
     <Synchronize>
-        <Differences LeftOnly="right" LeftNewer="right" RightNewer="right" RightOnly="none"/>
+        <Changes>
+            <Left Create="right" Update="right" Delete="none"/>
+            <Right Create="none" Update="right" Delete="right"/>
+        </Changes>
         <DeletionPolicy>RecycleBin</DeletionPolicy>
         <VersioningFolder Style="Replace"/>
     </Synchronize>
@@ -20,6 +23,8 @@
             <Item>\$Recycle.Bin\</Item>
             <Item>\RECYCLE?\</Item>
             <Item>*\thumbs.db</Item>
+            <Item>\INetCache\</Item>
+            <Item>\AC\INetCache\</Item>
         </Exclude>
         <SizeMin Unit="None">0</SizeMin>
         <SizeMax Unit="None">0</SizeMax>
@@ -27,13 +32,73 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left>C:\Users\Nick\AppData\Local\Microsoft\PowerToys</Left>
-            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\PowertoysSettings</Right>
+            <Left>C:\Users\Nick\AppData\Roaming\Microsoft\Windows\PowerShell</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsPSReadLine-AzPredict</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Local\clink</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsCmdProfile</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\clink</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsCmdClink</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Local\zoxide</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsTerminalZoxide</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsTerminalSettings</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\Dropbox\PC (2)\Documents\PowerShell</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsPowershellProfileSettings</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\Dropbox\PC (2)\Documents\PowerShell\</Left>
+            <Right>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\Userstyles</Right>
+            <Compare>
+                <Variant>Content</Variant>
+                <Symlinks>Exclude</Symlinks>
+                <IgnoreTimeShift/>
+            </Compare>
+            <Filter>
+                <Include>
+                    <Item>Microsoft.PowerShell_profile.ps1</Item>
+                    <Item>Microsoft.VSCode_profile.ps1</Item>
+                    <Item>Profile.ps1</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left>C:\Program Files\PowerShell\7</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsPowershell7ProfileSettings</Right>
+            <Compare>
+                <Variant>Content</Variant>
+                <Symlinks>Exclude</Symlinks>
+                <IgnoreTimeShift/>
+            </Compare>
+            <Filter>
+                <Include>
+                    <Item>Microsoft.PowerShell_profile.ps1</Item>
+                    <Item>Microsoft.VSCode_profile.ps1</Item>
+                    <Item>Profile.ps1</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
         </Pair>
     </FolderPairs>
     <Errors Ignore="true" Retry="0" Delay="5"/>
     <PostSyncCommand Condition="Completion"/>
-    <LogFolder/>
+    <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
     <EmailNotification Condition="Always"/>
     <GridViewType>Action</GridViewType>
 </FreeFileSync>

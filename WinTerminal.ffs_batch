@@ -32,6 +32,35 @@
     </Filter>
     <FolderPairs>
         <Pair>
+            <Left>C:\Users\Nick\</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\GitConfig</Right>
+            <Filter>
+                <Include>
+                    <Item>.gitconfig</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Roaming\Microsoft\Windows\PowerShell</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsPSReadLine-AzPredict</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Local\clink</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsCmdProfile</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\clink</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsCmdClink</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Local\zoxide</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsTerminalZoxide</Right>
+        </Pair>
+        <Pair>
             <Left>C:\Users\Nick\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe</Left>
             <Right>C:\Users\Nick\Dropbox\PC Tool Kit\WindowsTerminalSettings</Right>
         </Pair>
