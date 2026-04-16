@@ -11,8 +11,8 @@
             <Left Create="right" Update="right" Delete="none"/>
             <Right Create="none" Update="right" Delete="right"/>
         </Changes>
-        <DeletionPolicy>RecycleBin</DeletionPolicy>
-        <VersioningFolder Style="Replace"/>
+        <DeletionPolicy>Versioning</DeletionPolicy>
+        <VersioningFolder Threads="60" Style="TimeStamp-Folder">C:\Users\Nick\Dropbox\Random Save\VSCodeUserDataBackup-Versioning</VersioningFolder>
     </Synchronize>
     <Filter>
         <Include>
@@ -23,6 +23,8 @@
             <Item>\$Recycle.Bin\</Item>
             <Item>\RECYCLE?\</Item>
             <Item>*\thumbs.db</Item>
+            <Item>*\globalStorage\</Item>
+            <Item>*\workspaceStorage\</Item>
         </Exclude>
         <SizeMin Unit="None">0</SizeMin>
         <SizeMax Unit="None">0</SizeMax>
@@ -30,19 +32,19 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left Threads="20">C:\Users\Nick\.vscode</Left>
-            <Right Threads="20">C:\Users\Nick\Dropbox\Random Save\VSCodeBackup</Right>
+            <Left Threads="60">C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\LocalHistory</Left>
+            <Right Threads="60">C:\Users\Nick\Dropbox\Random Save\VSCodeLocalHistory</Right>
         </Pair>
         <Pair>
-            <Left Threads="20">C:\Users\Nick\AppData\Roaming\Code</Left>
-            <Right Threads="20">C:\Users\Nick\Dropbox\Random Save\VSCodeAppdataBackup</Right>
+            <Left Threads="60">C:\Users\Nick\AppData\Roaming\Code\User</Left>
+            <Right Threads="60">C:\Users\Nick\Dropbox\Random Save\VSCodeUserDataBackup</Right>
         </Pair>
         <Pair>
-            <Left Threads="20">C:\Users\Nick\.bundle</Left>
-            <Right Threads="20">C:\Users\Nick\Dropbox\Random Save\CodingStuffBackup\.bundle</Right>
+            <Left Threads="60">C:\Users\Nick\AppData\Roaming\Code - Insiders\User</Left>
+            <Right Threads="60">C:\Users\Nick\Dropbox\Random Save\VSCodeInsidersUserDataBackup</Right>
         </Pair>
     </FolderPairs>
-    <Errors Ignore="false" Retry="0" Delay="5"/>
+    <Errors Ignore="true" Retry="0" Delay="5"/>
     <PostSyncCommand Condition="Completion"/>
     <LogFolder>C:\Users\Nick\Dropbox\PC Tool Kit\FreeFileSync\Logs</LogFolder>
     <EmailNotification Condition="Always"/>

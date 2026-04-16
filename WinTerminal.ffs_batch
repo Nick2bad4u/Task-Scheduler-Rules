@@ -32,6 +32,68 @@
     </Filter>
     <FolderPairs>
         <Pair>
+            <Left>C:\Program Files\WinGet\Packages\aristocratos.btop4win_Microsoft.Winget.Source_8wekyb3d8bbwe\btop4win</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\btop4win-backup</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Program Files\PowerShell\7\</Left>
+            <Right>C:\Program Files\PowerShell\7-preview\</Right>
+            <Filter>
+                <Include>
+                    <Item>Microsoft.PowerShell_profile.ps1</Item>
+                    <Item>Microsoft.VSCode_profile.ps1</Item>
+                    <Item>Profile.ps1</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\.config</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\.config-backup</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\Nick-RootConfigs</Right>
+            <Filter>
+                <Include>
+                    <Item>.bash_history</Item>
+                    <Item>.bash_profile</Item>
+                    <Item>.bashrc</Item>
+                    <Item>.node_repl_history</Item>
+                    <Item>.npmrc</Item>
+                    <Item>.python_history</Item>
+                    <Item>.tcshrc</Item>
+                    <Item>.tcshrc.bak</Item>
+                    <Item>.tig_history</Item>
+                    <Item>.wslconfig</Item>
+                    <Item>.xonshrc</Item>
+                    <Item>.xonshrc.bak</Item>
+                    <Item>.zshrc</Item>
+                    <Item>bootcode-clean.elv</Item>
+                    <Item>x-cmd.bat</Item>
+                </Include>
+                <Exclude/>
+                <SizeMin Unit="None">0</SizeMin>
+                <SizeMax Unit="None">0</SizeMax>
+                <TimeSpan Type="None">0</TimeSpan>
+            </Filter>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Roaming\Elvish</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\Elvish</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\OhMyPosh-Atomic-Enhanced</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\OhMyPosh</Right>
+        </Pair>
+        <Pair>
+            <Left>C:\Users\Nick\AppData\Roaming\nushell\</Left>
+            <Right>C:\Users\Nick\Dropbox\PC Tool Kit\NuShell</Right>
+        </Pair>
+        <Pair>
             <Left>C:\Users\Nick\</Left>
             <Right>C:\Users\Nick\Dropbox\PC Tool Kit\GitConfig</Right>
             <Filter>

@@ -32,6 +32,10 @@
     </Filter>
     <FolderPairs>
         <Pair>
+            <Left Threads="60">C:\Users\Nick\Dropbox\PC (2)\Documents\GitHub\LocalHistory</Left>
+            <Right Threads="60">C:\Users\Nick\Dropbox\Random Save\VSCodeLocalHistory</Right>
+        </Pair>
+        <Pair>
             <Left Threads="60">C:\Users\Nick\AppData\Roaming\Code\User</Left>
             <Right Threads="60">C:\Users\Nick\Dropbox\Random Save\VSCodeUserDataBackup</Right>
         </Pair>

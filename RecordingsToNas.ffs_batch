@@ -34,10 +34,6 @@
             <Left>C:\Users\Nick\AppData\Roaming\obs-studio</Left>
             <Right>C:\Users\Nick\Dropbox\Cycling\OBS-Backup</Right>
         </Pair>
-        <Pair>
-            <Left Threads="10">F:\Recordings</Left>
-            <Right>R:\Recordings</Right>
-        </Pair>
     </FolderPairs>
     <Errors Ignore="true" Retry="3" Delay="1"/>
     <PostSyncCommand Condition="Completion"/>
