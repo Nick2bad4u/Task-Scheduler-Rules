@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Scheduler Rules</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0f172a;
+        --fg: #e2e8f0;
+        --muted: #94a3b8;
+        --card: #1e293b;
+        --link: #7dd3fc;
+      }
+      body {
+        margin: 0;
+        font-family: Segoe UI, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+      h1 { margin: 0 0 8px 0; }
+      p { color: var(--muted); }
+      .card {
+        background: var(--card);
+        border-radius: 12px;
+        padding: 16px;
+      }
+      ul { margin: 8px 0 0 0; padding-left: 18px; }
+      li { margin: 6px 0; }
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .small { font-size: 0.9rem; color: var(--muted); }
+      .error { color: #fca5a5; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Task Scheduler Rules</h1>
+      <p>
+        This page lists sync/task configuration files from the repository.
+      </p>
+
+      <section class="card">
+        <strong>Files</strong>
+        <p class="small">Auto-loaded from the GitHub API.</p>
+        <div id="status" class="small">Loading…</div>
+        <ul id="fileList"></ul>
+      </section>
+    </main>
+
+    <script>
+      const owner = "Nick2bad4u";
+      const repo = "Task-Scheduler-Rules";
+      const branch = "main";
+      const baseSite = `https://${owner.toLowerCase()}.github.io/${repo}`;
+
+      const includeExtensions = [
+        ".xml",
+        ".ffs_batch",
+        ".ffs_gui",
+        ".ffs_db",
+        ".txt"
+      ];
+
+      const statusEl = document.getElementById("status");
+      const listEl = document.getElementById("fileList");
+
+      function shouldInclude(name) {
+        const lower = name.toLowerCase();
+        return includeExtensions.some((ext) => lower.endsWith(ext));
+      }
+
+      function siteUrlFor(path) {
+        return `${baseSite}/${path
+          .split("/")
+          .map(encodeURIComponent)
+          .join("/")}`;
+      }
+
+      function render(files) {
+        listEl.innerHTML = "";
+        files.sort((a, b) => a.path.localeCompare(b.path));
+
+        for (const f of files) {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = siteUrlFor(f.path);
+          a.textContent = f.path;
+          li.appendChild(a);
+          listEl.appendChild(li);
+        }
+
+        statusEl.textContent = `Loaded ${files.length} file${files.length === 1 ? "" : "s"}.`;
+      }
+
+      async function loadFiles() {
+        try {
+          const res = await fetch(
+            `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`,
+            { headers: { Accept: "application/vnd.github+json" } }
+          );
+
+          if (!res.ok) throw new Error(`GitHub API returned ${res.status}`);
+
+          const data = await res.json();
+          const files = (data.tree || []).filter(
+            (item) => item.type === "blob" && shouldInclude(item.path)
+          );
+
+          render(files);
+        } catch (err) {
+          statusEl.classList.add("error");
+          statusEl.textContent =
+            "Could not load file list automatically. Please refresh in a minute.";
+          console.error(err);
+        }
+      }
+
+      loadFiles();
+    </script>
+  </body>
+</html>
